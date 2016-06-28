@@ -2,17 +2,30 @@
 <html>
 <head>
 	<title>GitHub home of Phil Gibbins</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<div class="container">
-		<main>
+		<header>
 			<h1>GitHub home of Phil Gibbins (subject to styling)</h1>
-			<p>Phil Gibbins, Front End Developer. Find me on:</p>
+			<p>Front End Developer</p>
+		</header>
+		<main>
+			<p>Find me on:</p>
 			<ul>
 				<li><a href="http://www.philgibbins.com">Portfolio Site</a></li>
 				<li><a href="http://uk.linkedin.com/pub/phil-gibbins/66/675/914">LinkedIn</a></li>
 			</ul>
 		</main>
+		<footer>
+			<small>&copy; Phil Gibbins <span id="year"></span></small>
+		</footer>
 	</div>
+	<script type="text/javascript">
+		// set copyright date in footer
+		var todayYear = new Date().getFullYear();
+		var footerYear = document.getElementById('year');
+		if (footerYear) footerYear.innerHTML = todayYear;
+	</script>
 </body>
 </html>
