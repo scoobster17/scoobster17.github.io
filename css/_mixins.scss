@@ -1,5 +1,15 @@
+// define a font-size in rem, em and pixels
 @mixin font-size ($size) {
 	font-size: #{$size * 10}px;
 	font-size: #{$size}em;
 	font-size: #{$size}rem;
+}
+
+// add all three hover states to a link; hover, focus, active
+@mixin states {
+	&:hover,
+	&:focus,
+	&:active {
+		@content;
+	}
 }

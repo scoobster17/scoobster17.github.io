@@ -1,4 +1,7 @@
 html {
+	background: $primaryBgColour;
+	color: $primaryFontColour;
+	font-family: Arial, sans-serif;
 	font-size: 62.5%;
 }
 main {
@@ -6,11 +9,12 @@ main {
 }
 h1 {
 	@include font-size(3);
-	margin:0 0 1em;
+	margin:0 0 .3em;
+	text-decoration: underline;
 }
 h2 {
 	@include font-size(2);
-	margin:0 0 1em;
+	margin:0 0 .5em;
 }
 p {
 	@include font-size(1.6);
@@ -25,4 +29,33 @@ ol {
 li {
 	@include font-size(1.6);
 	padding:.25em 0;
+}
+a {
+	color: inherit;
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration:none;
+	}
+}
+strong {
+	font-weight:bold;
+}
+
+.links-multiline {
+	li {
+		padding:10px;
+	}
+	a {
+		text-decoration: none;
+		@include states {
+			color: #BED1FF;
+		}
+	}
+}
+.links-icons {
+	a {
+		display:block;
+		padding:10px 50px;
+	}
 }
